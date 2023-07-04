@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.startTask">
+    <left>
+        <AnchorPane prefHeight="328.0" prefWidth="149.0" style="-fx-background-color: #FBEAEB;" BorderPane.alignment="CENTER">
+            <children>
+                <VBox layoutX="-1.0" layoutY="-3.0" prefHeight="321.0" prefWidth="152.0" style="-fx-background-color: #EBDE #EBDECFCF;">
+                    <children>
+                        <Button fx:id="startBtn" mnemonicParsing="false" onAction="#goToStart" prefHeight="64.0" prefWidth="152.0" style="-fx-background-color: #F5ceaf; -fx-border-color: black; -fx-border-width: 0 0 1 0;" text="Start Task" textAlignment="CENTER" textFill="#0d0d0d">
+                            <font>
+                                <Font name="American Typewriter" size="13.0" />
+                            </font>
+                        </Button>
+                  <Button fx:id="profileBtn" mnemonicParsing="false" onAction="#goToProfile" prefHeight="64.0" prefWidth="152.0" style="-fx-background-color: #F5ceaf; -fx-border-color: black; -fx-border-width: 0 0 1 0;" text="View Profile" textAlignment="CENTER" textFill="#0a0a0a">
+                     <font>
+                        <Font name="American Typewriter" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="progressBtn" mnemonicParsing="false" onAction="#goToProgress" prefHeight="64.0" prefWidth="152.0" style="-fx-background-color: #F5ceaf; -fx-border-color: black; -fx-border-width: 0 0 1 0;" text="View Progress" textAlignment="CENTER" textFill="#0a0a0a">
+                     <font>
+                        <Font name="American Typewriter" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="timeBtn" mnemonicParsing="false" onAction="#goToUsage" prefHeight="64.0" prefWidth="152.0" style="-fx-background-color: #F5ceaf; -fx-border-color: black; -fx-border-width: 0 0 1 0;" text="View Time Usage" textAlignment="CENTER" textFill="#0d0d0d">
+                     <font>
+                        <Font name="American Typewriter" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="calendarBtn" mnemonicParsing="false" onAction="#goToCalendar" prefHeight="64.0" prefWidth="152.0" style="-fx-background-color: #F5ceaf; -fx-border-color: black; -fx-border-width: 0 0 1 0;" text="View Calendar" textAlignment="CENTER" textFill="#1b1a1a">
+                     <font>
+                        <Font name="American Typewriter" size="13.0" />
+                     </font>
+                  </Button>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </left>
+    <top>
+        <AnchorPane prefHeight="57.0" prefWidth="601.0" style="-fx-background-color: #F5ceaf; -fx-border-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="88.0" fitWidth="159.0" layoutX="4.0" layoutY="-7.0">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="89.0" fitWidth="433.0" layoutX="162.0" layoutY="4.0">
+               <image>
+                  <Image url="@brainSignup.png" />
+               </image>
+            </ImageView>
+         </children>
+        </AnchorPane>
+    </top>
+    <right>
+        <AnchorPane prefHeight="319.0" prefWidth="451.0" style="-fx-background-color: fce6ca;" BorderPane.alignment="CENTER">
+            <children>
+                <Pane layoutX="66.0" layoutY="40.0" prefHeight="137.0" prefWidth="299.0" style="-fx-background-color: fce6ca;">
+                    <children>
+                        <Text layoutX="18.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;Your mind is like water. When it is agitated it becomes difficult to see, but when you let it settle, the answer becomes clear&quot;" textAlignment="CENTER" wrappingWidth="263.62188720703125">
+                            <font>
+                                <Font name="American Typewriter" size="20.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </Pane>
+                <Pane layoutX="140.0" layoutY="177.0" prefHeight="59.0" prefWidth="151.0" style="-fx-background-color: fce6ca;">
+               <children>
+                  <Text fx:id="timeSet" layoutX="23.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00" wrappingWidth="113.62353515625">
+                     <font>
+                        <Font name="American Typewriter" size="36.0" />
+                     </font>
+                  </Text>
+               </children>
+                </Pane>
+            <ImageView fitHeight="95.0" fitWidth="104.0" layoutX="331.0" layoutY="171.0">
+               <image>
+                  <Image url="@brainOnTreadMill.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="StopTime" fitHeight="57.0" fitWidth="66.0" layoutX="225.0" layoutY="240.0" onMouseClicked="#StopActivity">
+               <image>
+                  <Image url="@pause.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="startTime" fitHeight="56.0" fitWidth="67.0" layoutX="129.0" layoutY="240.0" onMouseClicked="#setData">
+               <image>
+                  <Image url="@play.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="currTask" layoutX="117.0" layoutY="14.0" text="No Current Task Running" textAlignment="CENTER" textFill="#141414" underline="true">
+               <font>
+                  <Font name="American Typewriter" size="16.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>
